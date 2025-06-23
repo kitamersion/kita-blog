@@ -1,0 +1,19 @@
+{
+  "name": "kita-blog",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "js-beautify": "^1.15.4"
+  },
+  "scripts": {
+    "test": "npm run beautify",
+    "beautify": "js-beautify layouts/**/*.html -r"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitamersion/kita-blog"
+  },
+  "license": "MIT"
+}
