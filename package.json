@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "js-beautify": "^1.15.4"
+    "@tailwindcss/cli": "^4.1.10",
+    "js-beautify": "^1.15.4",
+    "tailwindcss": "^4.1.10"
   },
   "scripts": {
     "test": "npm run beautify",
