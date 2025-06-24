@@ -10,8 +10,6 @@ tags = [
 ]
 +++
 
-# How to add images to post
-
 See: https://discourse.gohugo.io/t/how-to-add-image-to-hugo-with-local-and-remote/41391/5
 
 ```
