@@ -1,6 +1,6 @@
 # Base URL used when generating links to your pages
 # Set to the URL for your site
-baseURL = "https://kitamersion.github.io/kita-blog/"
+baseURL = "https://www.kitamersion.com"
 
 # Basic metadata configuration for your blog.
 title = "Kitamersion"
