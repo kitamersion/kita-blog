@@ -26,8 +26,9 @@
   {{- partial "custom_head.html" . -}}
 </head>
 
-<body>
-  <header>
+<body class="my-5 flex flex-col gap-4">
+  <header class="flex flex-col gap-2">
+    {{- partial "title.html" . -}}
     {{- partial "header.html" . -}}
   </header>
   <main>

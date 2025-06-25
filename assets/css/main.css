@@ -1,46 +1,196 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 
-/* base for basic color */
-/* TODO: port to tailwind defaults */
-:root {
-  --width: 720px;
-  --font-main: Verdana, sans-serif;
-  --font-secondary: Verdana, sans-serif;
-  --font-scale: 1em;
-  --background-color: #fff;
-  --heading-color: #222;
-  --text-color: #444;
-  --link-color: #3273dc;
-  --visited-color: #8b6fcb;
-  --code-background-color: #f2f2f2;
-  --code-color: #222;
-  --blockquote-color: #222;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background-color: #01242e;
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #0d1117;
     --heading-color: #eee;
-    --text-color: #ddd;
+    --text-color: #7e858e;
     --link-color: #8cc2dd;
     --visited-color: #8b6fcb;
     --code-background-color: #000;
     --code-color: #ddd;
     --blockquote-color: #ccc;
   }
+
+  /* Base element defaults */
+  body {
+    @apply font-sans text-base mx-auto px-5 max-w-3xl text-left break-words leading-6;
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  /* Heading defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  h1 { @apply text-3xl; }      /* 2em equivalent */
+  h2 { @apply text-2xl; }      /* 1.5em equivalent */
+  h3 { @apply text-xl; }       /* 1.17em equivalent */
+  h4 { @apply text-lg; }       /* 1em equivalent */
+  h5 { @apply text-base; }     /* 0.83em equivalent */
+  h6 { @apply text-sm; }       /* 0.67em equivalent */
+
+  /* Link defaults */
+  a {
+    @apply cursor-pointer no-underline;
+    color: var(--link-color);
+  }
+
+  a:hover {
+    @apply underline;
+  }
+
+  a:visited {
+    color: var(--visited-color);
+  }
+
+  /* Navigation links */
+  nav a {
+    @apply mr-2;
+  }
+
+  /* Text formatting */
+  strong, b {
+    @apply font-bold;
+    color: var(--heading-color);
+  }
+
+  /* List defaults */
+  ul {
+    @apply list-disc my-4 pl-8;
+  }
+
+  ol {
+    @apply list-decimal my-4 pl-8;
+  }
+
+  li {
+    @apply my-2 list-item;
+  }
+
+  /* Paragraph defaults */
+  p {
+    @apply my-4;
+  }
+
+  /* Button defaults */
+  button {
+    @apply m-0 cursor-pointer;
+  }
+
+  /* Time element */
+  time {
+    @apply font-mono text-sm;
+    font-style: normal;
+  }
+
+  /* Main content */
+  main {
+    @apply leading-relaxed;
+  }
+
+  /* Table defaults */
+  table {
+    @apply w-full my-4 border-collapse;
+  }
+
+  table th,
+  table td {
+    @apply p-2 text-left border-b border-gray-600;
+  }
+
+  table th {
+    @apply font-bold;
+    color: var(--heading-color);
+  }
+
+  /* Horizontal rule */
+  hr {
+    @apply border-0 border-t border-dashed border-gray-500 my-8;
+  }
+
+  /* Image defaults */
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  /* Code defaults */
+  pre, code {
+    @apply font-mono rounded;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+  }
+
+  pre {
+    @apply px-4 py-4 my-4 overflow-x-auto;
+  }
+
+  /* Blockquote defaults */
+  blockquote {
+    @apply border-l-4 border-gray-500 pl-5 my-4 italic;
+    color: var(--blockquote-color);
+  }
+
+  /* Footer defaults */
+  footer {
+    @apply py-6 text-center;
+  }
 }
 
-body {
-  font-family: var(--font-secondary);
-  font-size: var(--font-scale);
-  margin: auto;
-  padding: 20px;
-  max-width: var(--width);
-  text-align: left;
-  background-color: var(--background-color);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.5;
-  color: var(--text-color);
+/* Custom component classes using @layer components */
+@layer components {
+  .title:hover {
+    @apply no-underline;
+  }
+
+  .title h1 {
+    @apply text-2xl;
+  }
+
+  .inline {
+    @apply w-auto;
+  }
+
+  .highlight,
+  .code {
+    @apply px-4 py-1 my-4 overflow-x-auto rounded;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+  }
+
+  /* Blog post list component */
+  .blog-posts {
+    @apply list-none p-0 m-0;
+  }
+
+  .blog-posts li {
+    @apply flex my-2 items-baseline;
+  }
+
+  .blog-posts li span {
+    @apply flex-none w-32 font-mono text-sm text-gray-500;
+  }
+
+  .blog-posts li a {
+    @apply flex-1;
+    color: var(--link-color);
+  }
+
+  .blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+  .blog-posts li a:hover {
+    @apply underline;
+  }
 }

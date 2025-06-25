@@ -2,19 +2,20 @@
 {{ if eq .Type "blog" }}{{ if not .Params.menu }}
 <h1>{{ .Title }}</h1>
 <p>
-  <i>
-    <time datetime='{{ .Date.Format "2006-01-02" }}'>
-      {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
-    </time>
-  </i>
+  <time datetime='{{ .Date.Format "2006-01-02" }}'>
+    {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+  </time>
 </p>
+
+<hr />
 {{ end }}{{ end }}
 <content>
   {{ .Content }}
 </content>
-<p>
+
+<div>
   {{ range (.GetTerms "tags") }}
-  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  <a href="{{ .Permalink }}" class="px-2 py-1 rounded-md text-sm font-medium border">{{ .LinkTitle }}</a>
   {{ end }}
-</p>
+</div>
 {{ end }}
