@@ -5,8 +5,7 @@ description = "Testing and learning how to add images to markdown"
 tags = [
     "markdown",
     "syntax",
-    "image",
-    "linking"
+    "image"
 ]
 +++
 
