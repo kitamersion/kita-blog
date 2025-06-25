@@ -9,8 +9,6 @@
     </span>
   </div>
   {{ end }}
-  {{ if not .Data.Singular }}
-  {{ end }}
   <ul class="blog-posts">
     {{ range .Pages }}
     <li>
@@ -27,10 +25,12 @@
     </li>
     {{ end }}
   </ul>
+  {{ if not .Data.Singular }}
   <div>
     {{ range .Site.Taxonomies.tags }}
     <a href="{{ .Page.Permalink }}" class="px-2 py-1 rounded-md text-sm font-medium border">{{ .Page.Title }}</a>&nbsp;
     {{ end }}
   </div>
+  {{ end }}
 </content>
 {{ end }}
