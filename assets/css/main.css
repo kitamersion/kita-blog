@@ -127,7 +127,7 @@
   /* Code defaults */
   pre, code {
     @apply font-mono rounded;
-    background-color: var(--code-background-color);
+    background-color: var(--code-background-color) !important;
     color: var(--code-color);
   }
 
