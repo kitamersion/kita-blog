@@ -12,7 +12,7 @@ tags = [
 
 # Where Can I Read Manga?
 
-Did you know that you can read manga online and still support the creators, the publishers, and the industry? It's true! Check out the links below, and share this website to spread the word. #supportlegalmanga
+Did you know that you can read manga online and still support the creators, the publishers, and the industry? It's true! Check out the links below, and share this website to spread the word.
 
 ---
 
