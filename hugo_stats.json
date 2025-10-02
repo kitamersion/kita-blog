@@ -46,8 +46,10 @@
     "classes": [
       "blog-posts",
       "border",
+      "dark:hover:bg-gray-800",
       "flex",
       "flex-col",
+      "flex-wrap",
       "font-bold",
       "font-medium",
       "font-semibold",
@@ -58,6 +60,8 @@
       "gap-2",
       "gap-4",
       "highlight",
+      "hover:bg-gray-100",
+      "mt-4",
       "my-5",
       "no-underline",
       "px-2",
@@ -67,7 +71,8 @@
       "text-center",
       "text-sm",
       "text-xl",
-      "text-xs"
+      "text-xs",
+      "transition-colors"
     ],
     "ids": [
       "-choose-your-browser",
@@ -123,7 +128,6 @@
       "ordered-list",
       "other-elements--abbr-sub-sup-kbd-mark",
       "paragraph",
-      "privacy--data-practices",
       "shonen-jump",
       "slices",
       "structs",

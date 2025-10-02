@@ -15,9 +15,11 @@
   {{ .Content }}
 </content>
 
-<div>
+{{ if .GetTerms "tags" }}
+<div class="flex flex-wrap gap-2 mt-4">
   {{ range (.GetTerms "tags") }}
-  <a href="{{ .Permalink }}" class="px-2 py-1 rounded-md text-sm font-medium border">{{ .LinkTitle }}</a>
+  <a href="{{ .Permalink }}" class="px-2 py-1 rounded-md text-sm font-medium border no-underline hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">{{ .LinkTitle }}</a>
   {{ end }}
 </div>
+{{ end }}
 {{ end }}
