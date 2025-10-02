@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ if eq .Type "blog" }}{{ if not .Params.menu }}
+{{ if and (.Date) (not (eq .Date.Year 1)) }}
 <h1>{{ .Title }}</h1>
 <p>
   <time datetime='{{ .Date.Format "2006-01-02" }}'>
@@ -8,14 +8,18 @@
 </p>
 
 <hr />
-{{ end }}{{ end }}
+{{ else }}
+<h1>{{ .Title }}</h1>
+{{ end }}
 <content>
   {{ .Content }}
 </content>
 
-<div>
+{{ if .GetTerms "tags" }}
+<div class="flex flex-wrap gap-3 mt-6">
   {{ range (.GetTerms "tags") }}
-  <a href="{{ .Permalink }}" class="px-2 py-1 rounded-md text-sm font-medium border">{{ .LinkTitle }}</a>
+  <a href="{{ .Permalink }}" class="tag">{{ .LinkTitle }}</a>
   {{ end }}
 </div>
+{{ end }}
 {{ end }}

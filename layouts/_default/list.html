@@ -12,23 +12,23 @@
   <ul class="blog-posts">
     {{ range .Pages }}
     <li>
-      <span>
+      <div class="date">
         <time datetime='{{ .Date.Format "2006-01-02" }}'>
           {{ .Date.Format (default "02 January 2006" .Site.Params.dateFormat) }}
         </time>
-      </span>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+      <a href="{{ .Permalink }}" class="title">{{ .Title }}</a>
     </li>
     {{ else }}
     <li>
-      No posts yet
+      <div class="title">No posts yet</div>
     </li>
     {{ end }}
   </ul>
   {{ if not .Data.Singular }}
-  <div>
+  <div class="flex flex-wrap gap-3 mt-6">
     {{ range .Site.Taxonomies.tags }}
-    <a href="{{ .Page.Permalink }}" class="px-2 py-1 rounded-md text-sm font-medium border">{{ .Page.Title }}</a>&nbsp;
+    <a href="{{ .Page.Permalink }}" class="tag">{{ .Page.Title }}</a>
     {{ end }}
   </div>
   {{ end }}
