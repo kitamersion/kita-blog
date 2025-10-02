@@ -26,9 +26,9 @@
     {{ end }}
   </ul>
   {{ if not .Data.Singular }}
-  <div class="flex flex-wrap gap-2 mt-4">
+  <div class="flex flex-wrap gap-3 mt-6">
     {{ range .Site.Taxonomies.tags }}
-    <a href="{{ .Page.Permalink }}" class="px-2 py-1 rounded-md text-sm font-medium border no-underline hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">{{ .Page.Title }}</a>
+    <a href="{{ .Page.Permalink }}" class="tag">{{ .Page.Title }}</a>
     {{ end }}
   </div>
   {{ end }}

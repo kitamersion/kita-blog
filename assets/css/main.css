@@ -15,6 +15,10 @@
     --code-background-color: #000;
     --code-color: #ddd;
     --blockquote-color: #ccc;
+    --tag-background-color: rgba(139, 111, 203, 0.1);
+    --tag-background-hover-color: rgba(139, 111, 203, 0.2);
+    --tag-border-color: rgba(139, 111, 203, 0.2);
+    --tag-text-color: #8b6fcb;
   }
 
   /* Base element defaults */
@@ -192,5 +196,23 @@
 
   .blog-posts li a:hover {
     @apply underline;
+  }
+
+  /* Tag styling */
+  .tag {
+    @apply inline-block px-3 py-1 text-xs font-medium rounded-full no-underline transition-all duration-200;
+    background-color: var(--tag-background-color);
+    color: var(--tag-text-color);
+    border: 1px solid var(--tag-border-color);
+  }
+
+  .tag:hover {
+    @apply no-underline;
+    background-color: var(--tag-background-hover-color);
+    border-color: var(--tag-text-color);
+  }
+
+  .tag:visited {
+    color: var(--tag-text-color);
   }
 }
