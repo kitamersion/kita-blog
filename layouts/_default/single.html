@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ if eq .Type "blog" }}{{ if not .Params.menu }}
+{{ if and (.Date) (not (eq .Date.Year 1)) }}
 <h1>{{ .Title }}</h1>
 <p>
   <time datetime='{{ .Date.Format "2006-01-02" }}'>
@@ -8,7 +8,9 @@
 </p>
 
 <hr />
-{{ end }}{{ end }}
+{{ else }}
+<h1>{{ .Title }}</h1>
+{{ end }}
 <content>
   {{ .Content }}
 </content>

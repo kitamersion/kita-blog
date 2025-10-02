@@ -1,13 +1,9 @@
 +++
 title = "Privacy Policy"
 menu = "main"
-weight = 10
+weight = 999
 date = "2025-10-02"
 +++
-
-# Privacy & Data Practices
-
-02 October 2025
 
 We **do not** collect any data from users.
 
