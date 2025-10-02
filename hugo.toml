@@ -3,9 +3,9 @@
 baseURL = "https://www.kitamersion.com"
 
 # Basic metadata configuration for your blog.
-title = "Kitamersion"
+title = "北 Kitamersion"
 author = "Kitamersion"
-copyright = "Copyright © 2025, Kitamersion."
+copyright = "北 Kitamersion"
 languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
@@ -31,7 +31,7 @@ favicon = "images/favicon.png"
 # Another "title". This one is used as the site_name on the Hugo's internal
 # opengraph structured data template.
 # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-title = "Kitamersion"
+title = "北 Kitamersion"
 
 # By default, this theme displays dates with a format like "02 Jan, 2006", but
 # you can customize it by setting the `dateFormat` param in your site's config

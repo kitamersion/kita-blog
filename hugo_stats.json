@@ -61,6 +61,8 @@
       "gap-3",
       "gap-4",
       "highlight",
+      "hover:underline",
+      "items-center",
       "mt-6",
       "my-5",
       "no-underline",
@@ -70,6 +72,8 @@
       "tag",
       "text-4xl",
       "text-center",
+      "text-gray-500",
+      "text-sm",
       "text-xl",
       "text-xs",
       "title"
