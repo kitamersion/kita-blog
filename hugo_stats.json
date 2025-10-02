@@ -46,6 +46,7 @@
     "classes": [
       "blog-posts",
       "border",
+      "date",
       "flex",
       "flex-col",
       "flex-wrap",
@@ -70,7 +71,8 @@
       "text-4xl",
       "text-center",
       "text-xl",
-      "text-xs"
+      "text-xs",
+      "title"
     ],
     "ids": [
       "-choose-your-browser",

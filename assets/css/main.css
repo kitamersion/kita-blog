@@ -19,6 +19,10 @@
     --tag-background-hover-color: rgba(139, 111, 203, 0.2);
     --tag-border-color: rgba(139, 111, 203, 0.2);
     --tag-text-color: #8b6fcb;
+    --card-background-color: rgba(126, 133, 142, 0.05);
+    --card-background-hover-color: rgba(126, 133, 142, 0.08);
+    --card-border-color: rgba(126, 133, 142, 0.1);
+    --card-border-hover-color: rgba(126, 133, 142, 0.2);
   }
 
   /* Base element defaults */
@@ -174,28 +178,36 @@
 
   /* Blog post list component */
   .blog-posts {
-    @apply list-none p-0 m-0;
+    @apply list-none p-0 m-0 space-y-4;
   }
 
   .blog-posts li {
-    @apply flex my-2 items-baseline;
+    @apply flex flex-col p-4 rounded-lg transition-all duration-200;
+    background-color: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
   }
 
-  .blog-posts li span {
-    @apply flex-none w-32 font-mono text-sm text-gray-500;
+  .blog-posts li:hover {
+    background-color: var(--card-background-hover-color);
+    border-color: var(--card-border-hover-color);
   }
 
-  .blog-posts li a {
-    @apply flex-1;
+  .blog-posts li .date {
+    @apply font-mono text-sm mb-1;
+    color: var(--text-color);
+  }
+
+  .blog-posts li .title {
+    @apply text-base font-medium;
+    color: var(--heading-color);
+  }
+
+  .blog-posts li .title:hover {
     color: var(--link-color);
   }
 
-  .blog-posts li a:visited {
+  .blog-posts li .title:visited {
     color: var(--visited-color);
-  }
-
-  .blog-posts li a:hover {
-    @apply underline;
   }
 
   /* Tag styling */
