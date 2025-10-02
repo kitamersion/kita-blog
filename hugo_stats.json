@@ -46,7 +46,6 @@
     "classes": [
       "blog-posts",
       "border",
-      "dark:hover:bg-gray-800",
       "flex",
       "flex-col",
       "flex-wrap",
@@ -61,8 +60,6 @@
       "gap-3",
       "gap-4",
       "highlight",
-      "hover:bg-gray-100",
-      "mt-4",
       "mt-6",
       "my-5",
       "no-underline",
@@ -72,10 +69,8 @@
       "tag",
       "text-4xl",
       "text-center",
-      "text-sm",
       "text-xl",
-      "text-xs",
-      "transition-colors"
+      "text-xs"
     ],
     "ids": [
       "-choose-your-browser",
