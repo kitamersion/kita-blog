@@ -1,7 +1,5 @@
 +++
 title = "Privacy Policy"
-menu = "main"
-weight = 999
 date = "2025-10-02"
 +++
 
