@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Confirming your Kita Browser account</title>
+</head>
+<body>
+<p id="status">Confirming your account&hellip;</p>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+  var accessToken = params.get("access_token");
+  var refreshToken = params.get("refresh_token");
+  var statusEl = document.getElementById("status");
+
+  if (!accessToken || !refreshToken) {
+    statusEl.textContent = "This confirmation link is invalid or has expired. Please try signing up again from the Kita Browser extension.";
+    return;
+  }
+
+  window.postMessage(
+    { source: "kita-browser-confirm", accessToken: accessToken, refreshToken: refreshToken },
+    window.location.origin
+  );
+
+  statusEl.textContent = "Account confirmed! You can close this tab and return to Kita Browser.";
+})();
+</script>
+</body>
+</html>
