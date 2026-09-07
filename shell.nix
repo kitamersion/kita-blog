@@ -6,5 +6,6 @@ mkShell {
   buildInputs = [
       go
       hugo
+      nodejs
   ];
 }
