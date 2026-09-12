@@ -10,7 +10,7 @@ date = "2026-09-12"
 - Kita Browser works entirely on your device by default. Nothing leaves your browser unless you connect an integration or turn on Sync yourself.
 - The AniList integration talks directly to AniList from your browser using your own AniList account — we never see that data.
 - Kita Sync is **opt-in and off by default**. If you turn it on, your tracked videos/tags and your email address are stored in a database we run on Supabase so your data can follow you across devices.
-- You can delete your synced data or your whole account at any time, and we automatically clear out inactive accounts too.
+- **You can delete your synced data or your whole account at any time** — no waiting, no contacting us. We also automatically clear out inactive accounts.
 - We don't run analytics, ads, or tracking scripts anywhere in the extension.
 
 ---
@@ -61,7 +61,7 @@ From **Settings → Sync** and **Settings → Danger Zone**, at any time and wit
 - Pause Sync (stop it running in the background without deleting anything).
 - Manually clear expired tombstones.
 - Delete all of your synced data while keeping your account.
-- Delete your account entirely, which deletes your synced data and your login.
+- **Delete your account entirely, which deletes your synced data and your login.**
 
 ### The email confirmation page
 
@@ -87,11 +87,7 @@ We don't run analytics, advertising, or tracking scripts of any kind in the exte
 
 - Uninstalling the extension removes all locally stored data.
 - If you've used Kita Sync, you can delete your synced data or account at any time from Danger Zone — no need to ask us.
-- For anything else (data questions, requests, bugs), open an issue on the [GitHub repository](https://github.com/kitamersion).
-
-## Children's privacy
-
-Kita Browser is not directed at children under 13, and we don't knowingly collect information from them.
+- For anything else (data questions, requests, bugs), open an issue on the [GitHub repository](https://github.com/kitamersion/kita-browser-extension).
 
 ## Changes to this policy
 
